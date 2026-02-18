@@ -1,0 +1,99 @@
+R1>en
+Password: 
+R1#show running-config
+Building configuration...
+
+Current configuration : 1087 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+security passwords min-length 8
+!
+hostname R1
+!
+!
+!
+enable secret 5 $1$mERr$Z0yAdpmNQ11mwT0u2NGUV0
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username admin privilege 15 secret 5 $1$mERr$VoJzyBlQeSTBQXyrVHvuQ0
+!
+!
+license udi pid CISCO2911/K9 sn FTX15244B85-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip ssh time-out 60
+ip domain-name lab.local
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description ## Link to SW1 ##
+ ip address 192.168.1.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^CAuthorized Access Only. Violators Will Be Prosecuted. ^C
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 0
+ password 7 080243401A160912405B5E54
+ logging synchronous
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+!
+end
