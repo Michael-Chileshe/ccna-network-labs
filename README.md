@@ -1,4 +1,4 @@
-# CCNA Network Labs
+# CCNA Network Projects
 A portfolio of 15 hands-on networking labs built in Cisco Packet Tracer,
 covering the full CCNA 200-301 exam curriculum.
 
