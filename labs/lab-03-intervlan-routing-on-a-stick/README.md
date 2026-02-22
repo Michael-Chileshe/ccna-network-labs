@@ -9,7 +9,7 @@
 | **Difficulty** | Junior |
 | **Tools** | Cisco Packet Tracer 8.x |
 | **Date Completed** | 2026-02-19 |
-| **Author** | Your Name |
+| **Author** | Michael Chileshe |
 
 ---
 
